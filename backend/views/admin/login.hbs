@@ -1,0 +1,31 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="login-form bg-light mt-4 p-4">
+                    <form action="/admin/login" method="post" class="row g-3">
+                       
+                        <h4>Bienvenido al site admin</h4>
+                        <div class="col-12">
+                            <label>Usuario</label>
+                            <input type="text" name="usuario" class="form-control" placeholder="usuario">
+                        </div>
+                        <div class="col-12">
+                            <label>Clave</label>
+                            <input type="password" name="password" class="form-control" placeholder="clave">
+                        </div>
+                        
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark float-end">Acceder</button>
+                        </div>
+                    </form>
+                   {{#if error}}
+                   <div class="alert alert-danger" style="margin-top:15px;" role="alert">
+                    Usuario o clave incorrecta. Verifique e intente nuevamente
+                    </div>
+                   {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
